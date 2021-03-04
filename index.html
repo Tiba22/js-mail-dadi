@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Mail & Dadi</title>
+</head>
+<body>
+
+  <!-- 1 - Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato-->
+  <!-- 2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il compute. Stabilire il vincitore, in base a chi fa il punteggio più alto. -->
+  <!-- Note: Come detto in classe potete fare entrambi gli esercizi all'interno dello stesso file, commentando il codice dell'esercizio gia' svolto di volta in volta -->
+
+  <h1 id="mainTitle"></h1>
+
+  <script type="text/javascript">
+
+  // Esercizio email
+  var email = ["prova@gmail.com", "prova1@gmail.com", "prova12@gmail.com", "prova130@gmail.com", "prova1400@gmail.com", "prova15000@gmail.com"];
+  var emailUtente = prompt("Inserisci la tua email");
+
+  for (let i = 0 ; i < email.length; i++) {
+    if (email[i] === emailUtente ) {
+      console.log("L'email  corrisponde ai nostri database!");
+      i = email.length;
+
+    } else if(i == (email.length - 1)) {
+      console.log("L'email non corrisponde ai nostri database!");
+    }
+  }
+
+  // Esercizio Dadi
+
+  var numeroUtente = Math.round(Math.random() * (6-1) + 1);
+  var numeroPC = Math.round(Math.random() * (6-1) + 1);
+
+  if (numeroUtente > numeroPC) {
+    console.log("Tiba: " + numeroUtente + " Computer: " + numeroPC + " Tiba vince!");
+
+  } else if (numeroUtente == numeroPC) {
+    console.log("Tiba: " + numeroUtente + " Computer: " + numeroPC + " Pareggio!");
+
+  } else {
+    console.log("Tiba: " + numeroUtente + " Computer: " + numeroPC + " Computer vince!");
+  }
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
